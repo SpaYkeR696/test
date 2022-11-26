@@ -1,0 +1,104 @@
+.scroller {
+    overflow-x: scroll;
+    display: flex;
+    scroll-snap-type: x mandatory;
+}
+
+.scroller .item {
+    min-width: 100%;
+    scroll-snap-align: center;
+    background-color: #CAE4D8;
+    margin-bottom: 10px;
+    padding: 0 50px;
+}
+
+.scroller .item img {
+    margin: 15px auto -60px;
+    width: 120px;
+    height: 120px;
+    border: solid 4px #CAE4D8;
+    border-radius: 60px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.scroller .card {
+    background-color: rgb(237, 242, 247);
+    padding: 80px 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.scroller .card p {
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.scroller .card span {
+    display: block;
+    margin-top: 20px;
+    color: teal;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.btn-scroller {
+    position: absolute;
+    top: 50%;
+    margin-top: -26px;
+    width: auto;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: rgba(95, 106, 117, 0.3);
+    z-index: 1;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-scroller:hover {
+    background-color: rgba(95, 106, 117, 0.5);
+    cursor: pointer;
+}
+
+.btn.next {
+    right: 15px;
+}
+
+.btn.prev {
+    left: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 992px) {
+    .scroller .item {
+        padding: 0;
+        margin: 8px;
+    }
+
+    .scroller .card {
+        padding: 40px 20px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .scroller .card {
+        padding: 8px;
+    }
+
+    .scroller .item img {
+        width: 60px;
+        height: 60px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+}
